@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Sample Video 1",
+    "thumbnail": "/gallery/Sample Video 1/project1.png",
+    "tags": ["react", "nextjs", "tailwindcss"],
+    "description": "A six axis robotic arm controlled by inverse kinematics …",
+    "url": "https://github.com/Rik-Mukh/NeuralLlama",
+    "gallery": [
+      { "type": "image", "src": "/gallery/Sample Video 1/project1.png" },
+      { "type": "video", "src": "/gallery/Sample Video 1/demo1.mp4" }
+    ]
+  },
+  {
+    "title": "Sample Video 2",
+    "thumbnail": "/gallery/Sample Video 1/project2.png",
+    "tags": ["tutorial"],
+    "description": "A six axis robotic arm controlled by inverse kinematics …",
+    "url": "https://github.com/Rik-Mukh/NeuralLlama",
+    "gallery": [
+      { "type": "image", "src": "/gallery/Sample Video 1/project2.png" },
+      { "type": "video", "src": "https://youtu.be/o-dZKBwbsis" }
+    ]
+  },
+  {
+    "title": "Sample Video 3",
+    "thumbnail": "/gallery/Sample Video 1/project3.png",
+    "tags": ["fun"],
+    "description": "A six axis robotic arm controlled by inverse kinematics …",
+    "url": "https://github.com/Rik-Mukh/NeuralLlama",
+    "gallery": [
+      { "type": "image", "src": "/gallery/Sample Video 1/project1.png" },
+      { "type": "video", "src": "/gallery/Sample Video 1/demo1.mp4" }
+    ]
+  },
+  {
+    "title": "Sample Video 4",
+    "thumbnail": "/gallery/Sample Video 1/project4.png",
+    "tags": ["fun"],
+    "description": "A six axis robotic arm controlled by inverse kinematics …",
+    "url": "https://github.com/Rik-Mukh/NeuralLlama",
+    "gallery": [
+      { "type": "image", "src": "/gallery/Sample Video 1/project1.png" },
+      { "type": "video", "src": "/gallery/Sample Video 1/demo1.mp4" }
+    ]
+  },
+  {
+    "title": "Sample Video 5",
+    "thumbnail": "/gallery/Sample Video 1/project5.png",
+    "tags": ["fun"],
+    "description": "A six axis robotic arm controlled by inverse kinematics …",
+    "url": "https://github.com/Rik-Mukh/NeuralLlama",
+    "gallery": [
+      { "type": "image", "src": "/gallery/Sample Video 1/project1.png" },
+      { "type": "video", "src": "/gallery/Sample Video 1/demo1.mp4" }
+    ]
+  }
+]

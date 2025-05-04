@@ -1,26 +1,98 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "YouTube Sans";
+  src: url("/fonts/YouTubeSansLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "YouTube Sans";
+  src: url("/fonts/YouTubeSansRegular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "YouTube Sans";
+  src: url("/fonts/YouTubeSansMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YouTube Sans";
+  src: url("/fonts/YouTubeSansSemibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YouTube Sans";
+  src: url("/fonts/YouTubeSansBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YouTube Sans";
+  src: url("/fonts/YouTubeSansExtrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YouTube Sans";
+  src: url("/fonts/YouTubeSansDark.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* TODO: Change color variables so that one variable has different definitions */
+
+@theme {
+  --color-dark-bg: #0f0f0f;
+  --color-dark-bg-search: #121212;
+  --color-dark-bg-search-icon: #222222;
+  --color-dark-outline-search: #303030;
+  --color-dark-text-white: #f1f1f1;
+  --color-dark-text-gray: #aaaaaa;
+
+  --color-light-bg: #f1f1f1;
+  --color-light-bg-search: #ff0000;
+  --color-light-text-black: #0f0f0f;
+  --color-light-text-gray: #aaaaaa;
+}
+
+/* :root {
+  --color-bg: #f1f1f1;
+  --color-bg-search: #ff0000;
+  --color-text-black: #0f0f0f;
+  --color-text-gray: #aaaaaa;
+}
+
+.dark {
+  --color-bg: #0f0f0f;
+  --color-bg-search: #121212;
+  --color-search-icon: #222222;
+  --color-outline-search: #303030;
+  --color-text-white: #f1f1f1;
+  --color-text-gray: #aaaaaa;
+} */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20%,60% { transform: translateX(-4px); }
+  40%,80% { transform: translateX( 4px); }
+}
+.animate-shake {
+  animation: shake 0.5s;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "YouTube Sans", sans-serif;
+  font-weight: 400;
 }

@@ -1,0 +1,20 @@
+[
+    {
+      "code": "CMPUT 174",
+      "title": "Intro to Computer Science",
+      "description": "An overview of computing fundamentals.qwertyuiopasdfghjklzxcvbnmmnbvcxzlkjhgfdsapoiuytrewq",
+      "details": "Problem solving and basic coding concepts"
+    },
+    {
+      "code": "CMPUT 175",
+      "title": "Discrete Mathematics",
+      "description": "Study of logic, set theory, and combinatorics.",
+      "details": "Proof techniques and graph theory"
+    },
+    {
+      "code": "PHYS301",
+      "title": "Classical Mechanics",
+      "description": "Dynamics of particles and rigid bodies.",
+      "details": "Newtonian mechanics and energy conservation"
+    }
+  ]

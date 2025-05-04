@@ -38,7 +38,7 @@ export default function Gallery({
           <div key={idx}>
             {item.type === "image" ? (
               isRemote(item.src) ? (
-                <img
+                <Image
                   src={item.src}
                   alt=""
                   className="rounded shadow max-w-full h-auto"

@@ -36,6 +36,7 @@ export default async function ProjectPage(props: { params: Promise<Params> }) {
 
       <p className="leading-relaxed text-lg">{description}</p>
 
+      {/* Change view on GitHub button */}
       <a
         href={url}
         target="_blank"

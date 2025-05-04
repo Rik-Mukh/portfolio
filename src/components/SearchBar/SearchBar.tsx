@@ -1,9 +1,9 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { useRouter } from "next/navigation";
 import { search, SearchHit } from "@/lib/search";
 import ResultItem from "./ResultItem";
+import Image from 'next/image'
 
 export default function SearchBar() {
   const [term, setTerm] = useState("");
@@ -16,7 +16,6 @@ export default function SearchBar() {
   }>({ left: 0, top: 0, width: 0 });
   const [searched, setSearched] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number>(-1);
-  const router = useRouter();
   const boxRef = useRef<HTMLDivElement>(null);
   const dropRef = useRef<HTMLUListElement>(null);
 
@@ -92,7 +91,7 @@ export default function SearchBar() {
             type="submit"
             className="flex-none flex items-center justify-center px-3 sm:px-4 bg-dark-bg-search-icon border border-dark-outline-search border-l-0 rounded-r-full"
           >
-            <img
+            <Image
               src="/search-icon.svg"
               alt="Search"
               className="h-4 sm:h-5 md:h-6 w-auto"

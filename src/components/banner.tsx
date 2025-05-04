@@ -37,7 +37,7 @@ export default function Banner() {
 
           {/* TODO: Replace with my actual bio */}
           <p className="text-sm sm:text-base md:text-lg text-dark-text-gray max-w-prose">
-            If you're reading this, welcome to my corner of the internet&nbsp;😄
+            If you&apos;re reading this, welcome to my corner of the internet&nbsp;😄
           </p>
 
           {/* Social links */}

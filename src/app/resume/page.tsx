@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Resume() {
   return (
     <div className="w-full min-h-screen flex justify-center items-start px-4 py-6 sm:px-6 lg:px-8 overflow-x-hidden">
@@ -9,7 +11,7 @@ export default function Resume() {
           className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 md:-top-5 md:-right-5 bg-dark-bg-search-icon p-2 sm:p-1 rounded-full hover:bg-dark-outline-search"
           aria-label="Download PDF"
         >
-          <img
+          <Image
             src="/download-icon.svg"
             alt="Download"
             className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
@@ -17,7 +19,7 @@ export default function Resume() {
         </a>
 
         {/* Static resume image */}
-        <img
+        <Image
           src="/resume.jpg"
           alt="Resume"
           className="w-full h-auto mb-8 border rounded-md"

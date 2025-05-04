@@ -1,4 +1,6 @@
 "use client";
+import Image from 'next/image'
+
 type VideoData = [string, string, string[]];
 
 export default function Video({ data }: { data: VideoData }) {
@@ -7,7 +9,7 @@ export default function Video({ data }: { data: VideoData }) {
   return (
     <div className="flex flex-col w-full">
       {/* Thumbnail */}
-      <img
+      <Image
         src={thumbnail}
         alt={title}
         className="w-full aspect-video object-cover rounded-md"

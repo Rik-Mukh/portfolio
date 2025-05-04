@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import Banner from "@/components/banner";
 import ThemeProviderWrapper from "@/components/theme-provider";
 import { usePathname } from "next/navigation";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function RootLayout({
   children,
@@ -25,6 +26,7 @@ export default function RootLayout({
             {showBanner && <Banner />}
             {children}
           </ThemeProviderWrapper>
+          <SpeedInsights />
         </div>
       </body>
     </html>

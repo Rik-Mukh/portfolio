@@ -17,14 +17,14 @@ export async function generateMetadata(props: { params: Promise<Params> }) {
   return proj ? { title: proj.title } : {};
 }
 
-export default async function ProjectPage({
-  params,
-  searchParams,
-}: {
-  params: Promise<Params>;
-  searchParams: { q?: string };
-}) {
-  const { slug } = await params;
+export default async function ProjectPage(
+  props: {
+    params: Promise<Params>;
+    searchParams: Promise<{ q?: string }>;
+  }
+) {
+  const searchParams = await props.searchParams;
+  const { slug } = await props.params;
   const qRaw = searchParams.q || "";
   const project = getProject(slug);
   if (!project) return notFound();

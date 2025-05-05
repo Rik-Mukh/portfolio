@@ -2,7 +2,7 @@
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
 import SearchBar from "@/components/SearchBar";
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -10,7 +10,9 @@ export default function Navbar() {
       {/* Logo */}
       <Link href="/" className="flex flex-none items-center">
         {/* TODO: Replace with my logo */}
-        <Image src="/vercel.svg" alt="Logo" className="h-[30px] w-auto" />
+        <div className="relative h-[30px] aspect-square">
+          <Image src="/vercel.svg" alt="Logo" fill className="object-contain" />
+        </div>
       </Link>
 
       {/* Search bar */}

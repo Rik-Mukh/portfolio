@@ -23,8 +23,29 @@ export default async function ProjectPage(props: { params: Promise<Params> }) {
   const { title, tags, description, url, gallery } = project;
 
   return (
-    <div className="px-4 md:px-6 lg:px-8 max-w-5xl mx-auto mb-8 space-y-8">
-      <h1 className="text-3xl md:text-4xl font-bold mt-6">{title}</h1>
+    <div className="px-4 md:px-6 lg:px-8 max-w-5xl mx-auto mb-8 space-y-6">
+      <h1 className="text-3xl md:text-4xl font-bold mt-6">
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline inline-flex items-center"
+        >
+          {title}
+          <svg
+            fill="#ffffff"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            className="inline-block ml-2 h-5 w-5"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M22,12v9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V3A1,1,0,0,1,3,2h9a1,1,0,0,1,0,2H4V20H20V12a1,1,0,0,1,2,0Zm-.618-9.923A.991.991,0,0,0,21,2H16a1,1,0,0,0,0,2h2.586l-7.293,7.293a1,1,0,1,0,1.414,1.414L20,5.414V8a1,1,0,0,0,2,0V3a1.01,1.01,0,0,0-.077-.382A1,1,0,0,0,21.382,2.077Z"></path>
+            </g>
+          </svg>
+        </a>
+      </h1>
 
       <div className="flex flex-wrap gap-2">
         {tags.map((t) => (
@@ -36,14 +57,6 @@ export default async function ProjectPage(props: { params: Promise<Params> }) {
 
       <p className="leading-relaxed text-lg">{description}</p>
 
-      {/* TODO: Change view on GitHub button */}
-      <a
-        href={url}
-        target="_blank"
-        className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white"
-      >
-        View on GitHub
-      </a>
     </div>
   );
 }

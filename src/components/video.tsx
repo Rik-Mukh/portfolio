@@ -9,11 +9,14 @@ export default function Video({ data }: { data: VideoData }) {
   return (
     <div className="flex flex-col w-full">
       {/* Thumbnail */}
-      <Image
-        src={thumbnail}
-        alt={title}
-        className="w-full aspect-video object-cover rounded-md"
-      />
+      <div className="relative w-full aspect-video rounded-md overflow-hidden">
+        <Image
+          src={thumbnail}
+          alt={title}
+          fill
+          className="object-cover"
+        />
+      </div>
 
       {/* Title */}
       <p className="mt-1 text-sm font-medium text-dark-text-white truncate">

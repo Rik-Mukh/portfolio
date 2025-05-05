@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { search, SearchHit } from "@/lib/search";
 import ResultItem from "./ResultItem";
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function SearchBar() {
   const [term, setTerm] = useState("");
@@ -91,11 +91,14 @@ export default function SearchBar() {
             type="submit"
             className="flex-none flex items-center justify-center px-3 sm:px-4 bg-dark-bg-search-icon border border-dark-outline-search border-l-0 rounded-r-full"
           >
-            <Image
-              src="/search-icon.svg"
-              alt="Search"
-              className="h-4 sm:h-5 md:h-6 w-auto"
-            />
+            <div className="relative h-4 sm:h-5 md:h-6 aspect-square">
+              <Image
+                src="/search-icon.svg"
+                alt="Search"
+                fill
+                className="object-contain"
+              />
+            </div>
           </button>
         </form>
       </div>

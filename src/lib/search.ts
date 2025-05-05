@@ -11,7 +11,8 @@ export type SearchHit = {
 };
 
 export function search(term: string): SearchHit[] {
-  const q = term.trim().toLowerCase();
+  const raw = term.trim();
+  const q = raw.toLowerCase();
   if (!q) return [];
 
   // Returns both the snippet and the exact matched substring.
@@ -44,7 +45,7 @@ export function search(term: string): SearchHit[] {
       hits.push({
         type: "project",
         title: p.title,
-        slug: `/projects/${slugify(p.title)}`,
+        slug: `/projects/${slugify(p.title)}?q=${encodeURIComponent(raw)}`,
         snippet: p.title,
         match: p.title.substring(
           p.title.toLowerCase().indexOf(q),
@@ -60,7 +61,7 @@ export function search(term: string): SearchHit[] {
       hits.push({
         type: "project",
         title: p.title,
-        slug: `/projects/${slugify(p.title)}`,
+        slug: `/projects/${slugify(p.title)}?q=${encodeURIComponent(raw)}`,
         snippet: matchedTag,
         match: matchedTag,
       });
@@ -73,7 +74,7 @@ export function search(term: string): SearchHit[] {
       hits.push({
         type: "project",
         title: p.title,
-        slug: `/projects/${slugify(p.title)}`,
+        slug: `/projects/${slugify(p.title)}?q=${encodeURIComponent(raw)}`,
         snippet: desc.snippet,
         match: desc.match,
       });
@@ -89,7 +90,7 @@ export function search(term: string): SearchHit[] {
       hits.push({
         type: "course",
         title: c.title,
-        slug: "/courses",
+        slug: `/courses?q=${encodeURIComponent(raw)}`,
         snippet: c.code,
         match: c.code.substring(idx, idx + q.length),
       });
@@ -102,7 +103,7 @@ export function search(term: string): SearchHit[] {
       hits.push({
         type: "course",
         title: c.title,
-        slug: "/courses",
+        slug: `/courses?q=${encodeURIComponent(raw)}`,
         snippet: c.title,
         match: c.title.substring(idx, idx + q.length),
       });
@@ -115,7 +116,7 @@ export function search(term: string): SearchHit[] {
       hits.push({
         type: "course",
         title: c.title,
-        slug: "/courses",
+        slug: `/courses?q=${encodeURIComponent(raw)}`,
         snippet: desc.snippet,
         match: desc.match,
       });
@@ -128,7 +129,7 @@ export function search(term: string): SearchHit[] {
       hits.push({
         type: "course",
         title: c.title,
-        slug: "/courses",
+        slug: `/courses?q=${encodeURIComponent(raw)}`,
         snippet: details.snippet,
         match: details.match,
       });
